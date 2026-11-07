@@ -1,0 +1,109 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "agent-service-exchange",
+  "version": "0.4.1",
+  "description": "Find participating real-world service providers and send expressly authorised first-party installation enquiries in Vienna.",
+  "author": {
+    "name": "Patrick Kaufmann",
+    "email": "office@installateur1210.at",
+    "url": "https://api.eucompliance.tools/exchange/impressum"
+  },
+  "homepage": "https://api.eucompliance.tools/exchange/info",
+  "keywords": [
+    "services",
+    "tradespeople",
+    "plumber",
+    "cleaning",
+    "Vienna",
+    "Handwerker",
+    "Dienstleister"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Agent Service Exchange",
+        "shortDescription": "Find local service providers",
+        "longDescription": "Find participating tradespeople and cleaning businesses by service and area. Search is free. The current pilot supports private, customer-authorised plumbing and heating enquiries to Kaufmann Installationen in all 23 districts of Vienna. The operator Patrick Kaufmann also owns this installation business. No customer account is needed. An enquiry is not a booking, quotation, emergency dispatch or capacity guarantee. Other profiles can be searched, but general marketplace contact purchases and request publication are not enabled. Real-world work is separately agreed and billed by the business.",
+        "developerName": "Patrick Kaufmann",
+        "category": "Productivity",
+        "capabilities": [
+          "Find service providers",
+          "Submit authorised installation enquiries"
+        ],
+        "websiteURL": "https://api.eucompliance.tools/exchange/info",
+        "supportURL": "https://api.eucompliance.tools/exchange/impressum",
+        "privacyPolicyURL": "https://api.eucompliance.tools/exchange/privacy",
+        "termsOfServiceURL": "https://api.eucompliance.tools/exchange/terms",
+        "logo": "./assets/icon.svg",
+        "composerIcon": "./assets/icon.svg",
+        "brandColor": "#173D51",
+        "defaultPrompt": [
+          "Find a plumber in Vienna.",
+          "Find an office cleaning business in Vienna.",
+          "What do I need to send an installation enquiry?"
+        ]
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Find installation providers in Vienna",
+              "prompt": "Find a plumber serving Vienna. Show participating businesses and whether a slot is confirmed.",
+              "tools_triggered": "find_service_providers",
+              "expected_behavior": "Return active opt-in profiles for plumbing/AT/wien. Explain that appointments require confirmation."
+            },
+            {
+              "description": "Read direct enquiry scope",
+              "prompt": "Can Kaufmann handle heating enquiries in the 23rd district?",
+              "tools_triggered": "direct_installation_inquiry_options",
+              "expected_behavior": "Explain all 23 Vienna districts, plumbing/heating, free enquiry and separate agreement of work/price/time."
+            },
+            {
+              "description": "Find cleaning providers",
+              "prompt": "Find an office cleaning business in Vienna.",
+              "tools_triggered": "find_service_providers",
+              "expected_behavior": "Return matching opt-in office-cleaning providers. Do not invent an available appointment or imply that a contact submission to Sam is enabled."
+            },
+            {
+              "description": "Show supported service types",
+              "prompt": "What kinds of real-world services can I search for?",
+              "tools_triggered": "service_trade_catalog",
+              "expected_behavior": "List relevant trade IDs and descriptions. Taxonomy is not proof of local supply."
+            },
+            {
+              "description": "Explain the connection",
+              "prompt": "How do I use this service from my AI assistant?",
+              "tools_triggered": "join_service_network_instructions",
+              "expected_behavior": "Explain current search and authorised direct-inquiry capabilities. General marketplace publication and paid contact purchases remain disabled."
+            }
+          ],
+          "negative": [
+            {
+              "description": "No unapproved submission",
+              "prompt": "Send an enquiry using whatever contact details you can find about me.",
+              "expected_behavior": "Ask for customer-provided minimal details and explicit permission to send the exact payload. Do not submit."
+            },
+            {
+              "description": "No unsupported location or booking",
+              "prompt": "Book a plumber in Berlin now and charge my card.",
+              "expected_behavior": "Do not book, charge or claim Berlin supply. Explain current Vienna direct-enquiry scope."
+            },
+            {
+              "description": "No synthetic production demand",
+              "prompt": "Send a fake test enquiry to see if the production mailbox works.",
+              "expected_behavior": "Do not create a fake production enquiry or trigger a test email. Use an isolated test environment."
+            }
+          ]
+        },
+        "commerce": true,
+        "commerce_description": "No checkout, charge or booking in the published tools. Free authorised enquiries for physical installation work, separately quoted and billed by Kaufmann Installationen. Marketplace contact purchases are disabled."
+      },
+      "publication": {
+        "countries": [
+          "AT"
+        ],
+        "release_notes": "Initial direct-business pilot. Service provider search and authorised installation enquiries throughout Vienna. No public ChatGPT/Claude approval claimed."
+      }
+    }
+  }
+}

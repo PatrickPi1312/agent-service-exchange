@@ -1,0 +1,38 @@
+name: Publish public MCP metadata
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  id-token: write
+concurrency:
+  group: mcp-registry-publication
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out public metadata
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install checksum-verified official publisher
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --proto '=https' --tlsv1.2 --max-time 60 \
+            --output publisher.tar.gz \
+            https://github.com/modelcontextprotocol/registry/releases/download/v1.8.8/mcp-publisher_linux_amd64.tar.gz
+          printf '%s  %s\n' '09f1fa70ee146b640584274a1a6b2b8a0310b05d4321fa9224e6df6a016d67f4' publisher.tar.gz | sha256sum --check --strict
+          tar --extract --gzip --file publisher.tar.gz mcp-publisher
+      - name: Publish using short-lived GitHub identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          publisher_config=$(mktemp -d /dev/shm/exchange-publisher.XXXXXX)
+          trap 'rm -rf "$publisher_config"' EXIT
+          export XDG_CONFIG_HOME="$publisher_config"
+          ./mcp-publisher validate server.json
+          ./mcp-publisher login github-oidc
+          ./mcp-publisher publish server.json
