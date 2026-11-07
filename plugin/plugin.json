@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "agent-service-exchange",
-  "version": "0.4.2",
-  "description": "Find participating real-world service providers and send expressly authorised private installation enquiries in Vienna.",
+  "version": "0.4.3",
+  "description": "Find participating service providers and send customer-authorised installation or cleaning enquiries in Vienna.",
   "author": {
     "name": "Patrick Kaufmann",
     "email": "office@installateur1210.at",
@@ -23,12 +23,13 @@
       "interface": {
         "displayName": "Agent Service Exchange",
         "shortDescription": "Find local service providers",
-        "longDescription": "Find participating tradespeople and cleaning businesses by service and area. Search is free. The current pilot supports private, customer-authorised plumbing and heating enquiries to L&G in all 23 districts of Vienna. Patrick Kaufmann operates and develops the platform and is the contact for L&G enquiries. No customer account is needed. An enquiry is not a booking, quotation, emergency dispatch or capacity guarantee. Other profiles can be searched, but general marketplace contact purchases and request publication are not enabled. Real-world work is separately agreed and billed by the business.",
+        "longDescription": "Find participating tradespeople and cleaning businesses by service and area. The current pilot supports private, customer-authorised plumbing and heating enquiries to L&G and home, office and building cleaning enquiries to Sauber mit Sam in all 23 Vienna districts. Patrick Kaufmann operates and develops the platform and is the contact for L&G. Sauber mit Sam is operated by Samiha Aktaa; cleaning enquiries go to office@sauber-mit-sam.at with separate explicit customer permission. Search and direct enquiries are free; no customer account is needed. An enquiry is not a booking, quote or availability guarantee. Each business separately confirms and bills its work. General marketplace publication and paid contact purchases remain disabled.",
         "developerName": "Patrick Kaufmann",
         "category": "Productivity",
         "capabilities": [
           "Find service providers",
-          "Submit authorised installation enquiries"
+          "Submit authorised installation enquiries",
+          "Submit authorised cleaning enquiries"
         ],
         "websiteURL": "https://api.eucompliance.tools/exchange/info",
         "supportURL": "https://api.eucompliance.tools/exchange/impressum",
@@ -39,8 +40,8 @@
         "brandColor": "#173D51",
         "defaultPrompt": [
           "Find a plumber in Vienna.",
-          "Find an office cleaning business in Vienna.",
-          "What do I need to send an installation enquiry?"
+          "Help me send an office cleaning enquiry to Sauber mit Sam in Vienna.",
+          "What details does Sam need for a cleaning enquiry?"
         ]
       },
       "review": {
@@ -62,7 +63,7 @@
               "description": "Find cleaning providers",
               "prompt": "Find an office cleaning business in Vienna.",
               "tools_triggered": "find_service_providers",
-              "expected_behavior": "Return matching opt-in office-cleaning providers. Do not invent an available appointment or imply that a contact submission to Sam is enabled."
+              "expected_behavior": "Return matching opt-in cleaning providers. Explain the separate customer-authorised enquiry channel to Sauber mit Sam; do not invent an appointment or quote."
             },
             {
               "description": "Show supported service types",
@@ -75,6 +76,12 @@
               "prompt": "How do I use this service from my AI assistant?",
               "tools_triggered": "join_service_network_instructions",
               "expected_behavior": "Explain current search and authorised direct-inquiry capabilities. General marketplace publication and paid contact purchases remain disabled."
+            },
+            {
+              "description": "Prepare a cleaning enquiry",
+              "prompt": "I need weekly cleaning of a 60 square metre office in 1230 Vienna. What does Sam need?",
+              "tools_triggered": "direct_cleaning_inquiry_options",
+              "expected_behavior": "Explain Sauber mit Sam/Samiha Aktaa as recipient, Vienna coverage, relevant cleaning details and privacy. Ask for contact details and explicit consent before using submit_direct_cleaning_inquiry. No automatic booking or payment."
             }
           ],
           "negative": [
@@ -96,13 +103,13 @@
           ]
         },
         "commerce": true,
-        "commerce_description": "No checkout, charge or booking in the published tools. Free authorised enquiries for physical installation work, separately quoted and billed by L&G. Marketplace contact purchases are disabled."
+        "commerce_description": "No checkout, charge or booking in the public tools. Free authorised direct enquiries for installation or cleaning work, separately quoted and billed by L&G or Sauber mit Sam. General marketplace contact purchases remain disabled."
       },
       "publication": {
         "countries": [
           "AT"
         ],
-        "release_notes": "L&G installation provider; Patrick Kaufmann remains platform operator/developer and enquiry contact. Service provider search and authorised installation enquiries throughout Vienna. No public ChatGPT/Claude approval claimed."
+        "release_notes": "Adds customer-authorised direct cleaning enquiries to Sauber mit Sam in Vienna, with separate recipient consent, fixed mailbox, idempotency and isolated review fixtures. Existing L&G enquiry contract remains unchanged. No public ChatGPT/Claude approval claimed."
       }
     }
   }

@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.PatrickPi1312/agent-service-exchange",
   "title": "Agent Service Exchange",
-  "description": "Find service providers; send authorised plumbing/heating enquiries in Vienna. No customer account.",
-  "version": "0.4.2",
+  "description": "Find providers; send authorised installation or cleaning enquiries in Vienna. No customer account.",
+  "version": "0.4.3",
   "websiteUrl": "https://api.eucompliance.tools/exchange/info",
   "remotes": [
     {
