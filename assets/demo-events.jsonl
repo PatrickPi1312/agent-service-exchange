@@ -1,0 +1,11 @@
+{"elapsed_s": 0.0, "step": "start", "message": "SYNTHETIC DEMO: real MCP calls; no mail, booking or payment.", "endpoint": "https://api.eucompliance.tools/exchange-review/mcp"}
+{"elapsed_s": 0.239, "step": "connected", "message": "Connected: 9 tools discovered.", "tool_count": 9}
+{"elapsed_s": 0.262, "step": "search", "message": "L&G: 1 matching provider profile(s) in Vienna.", "provider": "L&G", "matches": 1}
+{"elapsed_s": 0.287, "step": "fixture", "message": "L&G: synthetic fixture loaded; mail explicitly disabled.", "provider": "L&G"}
+{"elapsed_s": 0.316, "step": "receipt", "message": "L&G: synthetic enquiry received; no booking.", "provider": "L&G", "inquiry_id": "2b1f99f1-313f-48de-aab2-db06dc8ede42", "mail_delivery": "disabled"}
+{"elapsed_s": 0.352, "step": "retry", "message": "L&G: identical retry returned the same receipt.", "provider": "L&G", "idempotency_passed": true}
+{"elapsed_s": 0.374, "step": "search", "message": "Sauber mit Sam: 1 matching provider profile(s) in Vienna.", "provider": "Sauber mit Sam", "matches": 1}
+{"elapsed_s": 0.397, "step": "fixture", "message": "Sauber mit Sam: synthetic fixture loaded; mail explicitly disabled.", "provider": "Sauber mit Sam"}
+{"elapsed_s": 0.421, "step": "receipt", "message": "Sauber mit Sam: synthetic enquiry received; no booking.", "provider": "Sauber mit Sam", "inquiry_id": "bbea81b6-6c1a-4861-ae27-169fc0b889f2", "mail_delivery": "disabled"}
+{"elapsed_s": 0.443, "step": "retry", "message": "Sauber mit Sam: identical retry returned the same receipt.", "provider": "Sauber mit Sam", "idempotency_passed": true}
+{"elapsed_s": 0.444, "step": "done", "message": "PASS: both synthetic enquiry flows; mail disabled; identical retry receipts."}

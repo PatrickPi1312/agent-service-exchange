@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Private security report
+    url: mailto:office@installateur1210.at
+    about: Report vulnerabilities privately. Never post customer data or secrets.

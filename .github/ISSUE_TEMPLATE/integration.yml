@@ -1,0 +1,20 @@
+name: Integration or bug report
+description: Tell us which assistant you are connecting, or what failed.
+body:
+  - type: markdown
+    attributes:
+      value: Use synthetic examples only. Do not include customer details, credentials or private enquiries.
+  - type: input
+    id: client
+    attributes:
+      label: Client and version
+      placeholder: Your MCP client or agent framework
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case or reproducible problem
+      description: What should the assistant do? For a bug, include synthetic reproduction steps and expected/actual behaviour.
+    validations:
+      required: true
