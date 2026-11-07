@@ -72,12 +72,6 @@
               "expected_behavior": "List relevant trade IDs and descriptions. Taxonomy is not proof of local supply."
             },
             {
-              "description": "Explain the connection",
-              "prompt": "How do I use this service from my AI assistant?",
-              "tools_triggered": "join_service_network_instructions",
-              "expected_behavior": "Explain current search and authorised direct-inquiry capabilities. General marketplace publication and paid contact purchases remain disabled."
-            },
-            {
               "description": "Prepare a cleaning enquiry",
               "prompt": "I need weekly cleaning of a 60 square metre office in 1230 Vienna. What does Sam need?",
               "tools_triggered": "direct_cleaning_inquiry_options",
