@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "agent-service-exchange",
-  "version": "0.4.1",
-  "description": "Find participating real-world service providers and send expressly authorised first-party installation enquiries in Vienna.",
+  "version": "0.4.2",
+  "description": "Find participating real-world service providers and send expressly authorised private installation enquiries in Vienna.",
   "author": {
     "name": "Patrick Kaufmann",
     "email": "office@installateur1210.at",
@@ -23,7 +23,7 @@
       "interface": {
         "displayName": "Agent Service Exchange",
         "shortDescription": "Find local service providers",
-        "longDescription": "Find participating tradespeople and cleaning businesses by service and area. Search is free. The current pilot supports private, customer-authorised plumbing and heating enquiries to Kaufmann Installationen in all 23 districts of Vienna. The operator Patrick Kaufmann also owns this installation business. No customer account is needed. An enquiry is not a booking, quotation, emergency dispatch or capacity guarantee. Other profiles can be searched, but general marketplace contact purchases and request publication are not enabled. Real-world work is separately agreed and billed by the business.",
+        "longDescription": "Find participating tradespeople and cleaning businesses by service and area. Search is free. The current pilot supports private, customer-authorised plumbing and heating enquiries to L&G in all 23 districts of Vienna. Patrick Kaufmann operates and develops the platform and is the contact for L&G enquiries. No customer account is needed. An enquiry is not a booking, quotation, emergency dispatch or capacity guarantee. Other profiles can be searched, but general marketplace contact purchases and request publication are not enabled. Real-world work is separately agreed and billed by the business.",
         "developerName": "Patrick Kaufmann",
         "category": "Productivity",
         "capabilities": [
@@ -54,7 +54,7 @@
             },
             {
               "description": "Read direct enquiry scope",
-              "prompt": "Can Kaufmann handle heating enquiries in the 23rd district?",
+              "prompt": "Can L&G handle heating enquiries in the 23rd district?",
               "tools_triggered": "direct_installation_inquiry_options",
               "expected_behavior": "Explain all 23 Vienna districts, plumbing/heating, free enquiry and separate agreement of work/price/time."
             },
@@ -96,13 +96,13 @@
           ]
         },
         "commerce": true,
-        "commerce_description": "No checkout, charge or booking in the published tools. Free authorised enquiries for physical installation work, separately quoted and billed by Kaufmann Installationen. Marketplace contact purchases are disabled."
+        "commerce_description": "No checkout, charge or booking in the published tools. Free authorised enquiries for physical installation work, separately quoted and billed by L&G. Marketplace contact purchases are disabled."
       },
       "publication": {
         "countries": [
           "AT"
         ],
-        "release_notes": "Initial direct-business pilot. Service provider search and authorised installation enquiries throughout Vienna. No public ChatGPT/Claude approval claimed."
+        "release_notes": "L&G installation provider; Patrick Kaufmann remains platform operator/developer and enquiry contact. Service provider search and authorised installation enquiries throughout Vienna. No public ChatGPT/Claude approval claimed."
       }
     }
   }

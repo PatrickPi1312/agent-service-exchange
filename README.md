@@ -2,7 +2,7 @@
 
 Find participating real-world service providers through your AI assistant.
 
-**Live pilot:** free provider search and expressly authorised private plumbing/heating enquiries to Kaufmann Installationen across all 23 Vienna districts (Austria). No customer account, automatic booking or appointment guarantee. Operator Patrick Kaufmann also owns the installation business. Other opt-in businesses can be searched; general marketplace publication and paid contact purchases are not enabled.
+**Live pilot:** free provider search and expressly authorised private plumbing/heating enquiries to L&G across all 23 Vienna districts (Austria). No customer account, automatic booking or appointment guarantee. Patrick Kaufmann operates and develops the platform and is the contact for L&G installation enquiries. Other opt-in businesses can be searched; general marketplace publication and paid contact purchases are not enabled.
 
 - [Find a service provider](https://api.eucompliance.tools/exchange/info)
 - [Connection and tool documentation](https://api.eucompliance.tools/exchange/docs)

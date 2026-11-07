@@ -3,7 +3,7 @@
   "name": "io.github.PatrickPi1312/agent-service-exchange",
   "title": "Agent Service Exchange",
   "description": "Find service providers; send authorised plumbing/heating enquiries in Vienna. No customer account.",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "websiteUrl": "https://api.eucompliance.tools/exchange/info",
   "remotes": [
     {
