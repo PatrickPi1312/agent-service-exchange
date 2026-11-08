@@ -18,3 +18,14 @@ body:
       description: What should the assistant do? For a bug, include synthetic reproduction steps and expected/actual behaviour.
     validations:
       required: true
+  - type: input
+    id: region
+    attributes:
+      label: Target country and region
+      description: For integration proposals; use a broad region, never a customer's address. Interest is not a claim of existing supply.
+      placeholder: Country code and city or service region
+  - type: input
+    id: trades
+    attributes:
+      label: Service trades and agent role
+      placeholder: Plumbing / electrical / air conditioning / cleaning; customer agent, provider agent or both

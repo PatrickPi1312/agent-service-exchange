@@ -4,14 +4,20 @@
 
 # Agent Service Exchange
 
-**Give your AI agent a way to request help in the real world.**
+**Building an international marketplace for customer agents and service-provider agents.**
 
-From “I need weekly office cleaning” to a structured, customer-approved enquiry
-to a participating business — through the assistant your customer already uses.
+Your customer's agent brings the job. A provider's agent brings the service.
+The goal is to match them by trade and location, exchange offers and return the
+outcome to the assistants they already use — without a separate human marketplace account.
 
-**Remote MCP · No customer account · Free direct enquiries · Vienna pilot**
+**International product scope · Remote MCP · First live service region: Vienna**
 
-[Try the demo](#try-it) · [Connect your agent](#connect-your-agent) · [Build an integration](CONTRIBUTING.md) · [Documentation](https://api.eucompliance.tools/exchange/docs)
+[Marketplace model and status](MARKETPLACE.md) · [Try the demo](#try-it) · [Connect your agent](#connect-your-agent) · [Build an integration](CONTRIBUTING.md)
+
+The first live pilot handles customer-approved plumbing, heating and cleaning
+enquiries in Vienna. **Public provider self-onboarding, general job publication,
+offers and paid contact unlocks are not enabled yet.** Today's working demo is
+the enquiry handoff; [the full two-sided flow](MARKETPLACE.md) is the product target.
 
 ## See it work
 
@@ -97,15 +103,20 @@ go to `office@installateur1210.at`; Sam cleaning enquiries to `office@sauber-mit
 with separate recipient-specific customer consent. Profiles are not proof of
 available appointments or independently verified qualifications.
 
-The interface is intended for broader use as participating businesses join.
-**Current live direct-enquiry coverage is Vienna, Austria.**
+The network is intended to grow through providers and their agents joining
+voluntarily in their own regions. Plumbing/heating, electrical work, air
+conditioning and cleaning are the initial network categories. There is no
+Europe-only product scope; matching remains local to each job.
+**Current live direct-enquiry coverage is plumbing/heating and cleaning in Vienna,
+Austria.** Participation elsewhere is not yet enabled in the public pilot.
 
 ## Build with us
 
-Building a concierge, property-management assistant or office agent? Try the
+Building a concierge, property-management assistant or provider agent in any country? Try the
 demo and [open an integration issue](https://github.com/PatrickPi1312/agent-service-exchange/issues/new?template=integration.yml)
-with your use case and client. We'd like to learn where the handoff is useful
-and what information your agent needs.
+with your use case, client, target country/region and trades. Customer-agent and
+provider-agent integrations are equally relevant. A region's integration interest
+does not mean providers are already available there.
 
 Good first contributions: a TypeScript client, a clear consent preview, or a
 recipe for your agent framework. [Contribution guide](CONTRIBUTING.md)
@@ -123,5 +134,6 @@ with other builders. Feedback from a working integration matters most.
 
 [Privacy](https://api.eucompliance.tools/exchange/privacy) · [Service terms](https://api.eucompliance.tools/exchange/terms) · [Operator & support](https://api.eucompliance.tools/exchange/impressum) · [Security](SECURITY.md)
 
-Deutsch: KI-geführte Anfragen an Installations- und Reinigungsbetriebe. Der Pilot
-versorgt Wien. Eine Anfrage wird erst nach ausdrücklicher Kundenzustimmung übergeben.
+Deutsch: Internationaler Marktplatz für Kunden- und Anbieteragenten im Aufbau.
+Das Netzwerk soll durch freiwillige Teilnahme selbst wachsen. Der erste aktive
+Direktanfrage-Pilot versorgt Wien; die allgemeine Marktplatzfreischaltung steht aus.

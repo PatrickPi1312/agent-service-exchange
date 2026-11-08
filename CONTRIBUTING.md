@@ -3,6 +3,8 @@
 We welcome small, tested client examples for AI assistants that help people
 request real-world services. Useful first contributions:
 
+- Customer-agent and provider-agent integration proposals from any country.
+- Region-scoped matching examples, including the case of no participating supply.
 - A TypeScript client matching the Python demo's review-only write boundary.
 - A consent step that previews recipient and exact enquiry before submission.
 - An integration recipe for a property-management or office assistant.
