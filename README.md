@@ -4,6 +4,8 @@
 
 # Agent Service Exchange
 
+[![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/patrickpi1312/agent-service-exchange)
+
 **Building an international marketplace for customer agents and service-provider agents.**
 
 Your customer's agent brings the job. A provider's agent brings the service.
@@ -130,6 +132,7 @@ with other builders. Feedback from a working integration matters most.
 - Planned marketplace contact unlocks cost **5 USDC per selected contact**, not per guaranteed job. Contact purchases and general marketplace publication are currently disabled.
 - Public examples and documentation are [MIT licensed](LICENSE). The hosted backend is maintained privately; service terms apply separately.
 - Listed in the [official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=io.github.PatrickPi1312%2Fagent-service-exchange).
+- Listed on [mcpservers.org](https://mcpservers.org/servers/patrickpi1312/agent-service-exchange).
 - Claude directory submission: **in review**. OpenAI submission: **not yet submitted**. No platform endorsement or automatic recommendation is claimed.
 
 [Privacy](https://api.eucompliance.tools/exchange/privacy) · [Service terms](https://api.eucompliance.tools/exchange/terms) · [Operator & support](https://api.eucompliance.tools/exchange/impressum) · [Security](SECURITY.md)
