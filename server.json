@@ -3,8 +3,15 @@
   "name": "io.github.PatrickPi1312/agent-service-exchange",
   "title": "Agent Service Exchange",
   "description": "Find providers; send authorised installation or cleaning enquiries in Vienna. No customer account.",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "websiteUrl": "https://api.eucompliance.tools/exchange/info",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/PatrickPi1312/agent-service-exchange/main/plugin/assets/icon.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": ["512x512"]
+    }
+  ],
   "remotes": [
     {
       "type": "streamable-http",
